@@ -1,7 +1,6 @@
 class Sapwood < Formula
   desc "Source control for monorepos at agent scale"
   homepage "https://kabirnarang39.github.io/sapwood/"
-  version "1.8.0"
   license "Apache-2.0"
 
   on_macos do
