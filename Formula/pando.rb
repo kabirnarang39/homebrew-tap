@@ -5,23 +5,23 @@ class Pando < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.0/pando-v2.1.0-aarch64-apple-darwin.tar.gz"
-      sha256 "82ef23850c2d1ed3ec4385e5d137ae9b4cbed810d327c66db5d66ec2b6d7924c"
+      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.1/pando-v2.1.1-aarch64-apple-darwin.tar.gz"
+      sha256 "d34d8304c851b2a34f4d5185d4654755e6451fc214d31f9022bc2eb2d5ffd470"
     end
     on_intel do
-      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.0/pando-v2.1.0-x86_64-apple-darwin.tar.gz"
-      sha256 "feba71c80451e981b5e8774be6e7c05460b4f56da234a28fb63b5ef729b7831d"
+      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.1/pando-v2.1.1-x86_64-apple-darwin.tar.gz"
+      sha256 "947886e7c77182e01ffaccd83082e91681841cd89dedf735117ff9861cd6d7b5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.0/pando-v2.1.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a982cdc5f5c5cb0c4edda7c7ba411c319fe38ef867d2989323f565778e4c9c9d"
+      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.1/pando-v2.1.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "e0df97c1c0e416cec5c152d212642c0b218fa32a9117c06ca89b3e12f89c4658"
     end
     on_intel do
-      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.0/pando-v2.1.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "638bb899a6f76f555546b653c665ebd603a21a9ce7e04ab81ebb63b1997cd514"
+      url "https://github.com/kabirnarang39/pando/releases/download/v2.1.1/pando-v2.1.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "5fc3c03241823251ccd6e5b060fd6590f751b48603c2bafe0ef83e51795e4b67"
     end
   end
 
