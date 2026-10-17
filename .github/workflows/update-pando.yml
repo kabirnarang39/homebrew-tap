@@ -1,0 +1,40 @@
+name: Update pando
+
+# Keeps Formula/pando.rb on Pando's latest release. It runs in this repository with this
+# repository's own token, so no personal access token is needed anywhere: every half hour
+# (or on demand) it compares the formula with the latest release and, when there is a newer
+# one, rebuilds the formula from that release's checksum files and commits it.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency: update-pando
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Update the formula to the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release view --repo kabirnarang39/pando --json tagName -q .tagName)
+          current=$(grep -o 'releases/download/v[0-9][^/]*' Formula/pando.rb | head -1 | cut -d/ -f3)
+          if [ "$tag" = "$current" ]; then
+            echo "Formula is already at $tag"
+            exit 0
+          fi
+          # The formula script from that release refuses to write a formula with any checksum
+          # missing, so a release that is still uploading is simply tried again next time.
+          curl -fsSL "https://raw.githubusercontent.com/kabirnarang39/pando/$tag/scripts/homebrew-formula.sh" -o formula.sh
+          sh formula.sh "$tag" > formula.rb
+          mv formula.rb Formula/pando.rb
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "pando ${tag#v}"
+          git push
