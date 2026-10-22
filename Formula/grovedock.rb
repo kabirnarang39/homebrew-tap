@@ -26,11 +26,10 @@ class Grovedock < Formula
   end
 
   def install
-    bin.install "gd", "grovedockd", "git-remote-gd"
+    bin.install "gd", "git-remote-gd"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/gd --version")
-    assert_match version.to_s, shell_output("#{bin}/grovedockd --version")
   end
 end
