@@ -1,4 +1,4 @@
-class Grovedock < Formula
+class Gd < Formula
   desc "Source control for monorepos at agent scale"
   homepage "https://grovedock.com/"
   license "Apache-2.0"
