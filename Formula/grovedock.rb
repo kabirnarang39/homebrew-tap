@@ -5,23 +5,23 @@ class Grovedock < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/grovedock/gd/releases/download/v4.0.5/gd-v4.0.5-aarch64-apple-darwin.tar.gz"
-      sha256 "36e4ad652730a8be9a5227fd6f42d0bf9945f7e805b46737aa6ca7cbb9e4e10d"
+      url "https://cloud.grovedock.com/grovedock/gd/releases/download/v4.0.6/gd-v4.0.6-aarch64-apple-darwin.tar.gz"
+      sha256 "9601e11dae51d88bdbe339677f88f951035dbebd2c82f7378dd87caed72337c2"
     end
     on_intel do
-      url "https://github.com/grovedock/gd/releases/download/v4.0.5/gd-v4.0.5-x86_64-apple-darwin.tar.gz"
-      sha256 "5969ad58373d063f09d95b998c1e6bdc434c98ccab9aa24adb8bfd56219d85fa"
+      url "https://cloud.grovedock.com/grovedock/gd/releases/download/v4.0.6/gd-v4.0.6-x86_64-apple-darwin.tar.gz"
+      sha256 "1f8408402a3d1e6a18dc91d35a082936a3e8f09802421b3ea72ab5e9456d256b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/grovedock/gd/releases/download/v4.0.5/gd-v4.0.5-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fd767fd4f1e030c399bc264131bffa886ed4128f79d0eeca4cc9b59ef0c284e0"
+      url "https://cloud.grovedock.com/grovedock/gd/releases/download/v4.0.6/gd-v4.0.6-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "825ee893e1a1d351e740ef2380dcfdb260b53cdd0f71a1dfbd2275a909c0f7d6"
     end
     on_intel do
-      url "https://github.com/grovedock/gd/releases/download/v4.0.5/gd-v4.0.5-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "698eb24c96b64ab041df01abc76da6e37bf1a1984e682537aa28738014b6e0b6"
+      url "https://cloud.grovedock.com/grovedock/gd/releases/download/v4.0.6/gd-v4.0.6-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "3a3debec10e10b9fc79906cced736c0762e001b9ff2134cbbb8a0734a4af78e7"
     end
   end
 
